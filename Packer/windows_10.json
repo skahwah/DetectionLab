@@ -11,8 +11,8 @@
       "winrm_username": "vagrant",
       "winrm_password": "vagrant",
       "winrm_timeout" : "4h",
-      "ram_size": "2048",
-      "cpu": "2",
+      "ram_size": "1024",
+      "cpu": "1",
       "switch_name": "{{user `switch_name`}}",
       "guest_additions_mode": "none",
       "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\"",
@@ -68,8 +68,8 @@
       "vmx_data": {
         "RemoteDisplay.vnc.enabled": "false",
         "RemoteDisplay.vnc.port": "5900",
-        "memsize": "2048",
-        "numvcpus": "2",
+        "memsize": "1024",
+        "numvcpus": "1",
         "scsi0.virtualDev": "lsisas1068"
       }
     },
@@ -110,13 +110,13 @@
           "modifyvm",
           "{{.Name}}",
           "--memory",
-          "2048"
+          "1024"
         ],
         [
           "modifyvm",
           "{{.Name}}",
           "--cpus",
-          "2"
+          "1"
         ]
       ]
     }
